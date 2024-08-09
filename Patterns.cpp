@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+
 //! pattern 2
 // Input Format: N = 3
 // Result: 
@@ -69,12 +70,43 @@ using namespace std;
 // }
 
 //!pattern 4
-void pattern4(int n)
+// Input Format: N = 3
+// Result: 
+// * * *
+// * * 
+// *
+// void pattern4(int n)
+// {
+//     for(int i=1;i<n;i++)
+//     {
+//         for(int j=n;j>i;j--){
+//             cout<<"*";
+//         }
+//         cout<<endl;
+//     }
+// }
+// int main()
+// {
+//     int n;
+//     cin>>n;
+//     pattern4(n);
+//     return 0;
+// }
+
+ //! pattern 5
+
+// Input Format: N = 3
+// Result: 
+// 1 2 3
+// 1 2
+// 1
+
+void pattern5(int n )
 {
-    for(int i=1;i<n;i++)
+    for(int i=0; i<n; i++)
     {
-        for(int j=n;j>i;j--){
-            cout<<"*";
+        for(int j=n; j>i; j--){
+            cout<<n-j+1;
         }
         cout<<endl;
     }
@@ -83,7 +115,6 @@ int main()
 {
     int n;
     cin>>n;
-    pattern4(n);
+    pattern5(n);
     return 0;
 }
-
