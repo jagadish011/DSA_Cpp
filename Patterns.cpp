@@ -129,33 +129,70 @@ using namespace std;
 //  ********* 
 // ***********
 
-void pattern6(int n)
-{
-    //outer for 
-    for(int i=0; i<n; i++)
-    {
-        //space
-        for(int j=0;j<n-i-1;j++)
-        {
-            cout<<" ";
-        }
-        //star
-        for(int j=0; j<2*i+1; j++)
-        {
-            cout<<"*";
-        }
-        //space
-        for(int j=0; j<n-i-1; j++)
-        {
-            cout<<" ";
-        }
-        cout<<endl;
-    }
-}
-int main()
-{
-    int n;
-    cin>>n;
-    pattern6(n);
-    return 0;
-}
+// void pattern6(int n)
+// {
+//     //outer for 
+//     for(int i=0; i<n; i++)
+//     {
+//         //space
+//         for(int j=0;j<n-i-1;j++)
+//         {
+//             cout<<" ";
+//         }
+//         //star
+//         for(int j=0; j<2*i+1; j++)
+//         {
+//             cout<<"*";
+//         }
+//         //space
+//         for(int j=0; j<n-i-1; j++)
+//         {
+//             cout<<" ";
+//         }
+//         cout<<endl;
+//     }
+// }
+// int main()
+// {
+//     int n;
+//     cin>>n;
+//     pattern6(n);
+//     return 0;
+// }
+
+//! pattern 7
+// Input Format: N = 6
+// Result:     
+// ***********
+//  *********
+//   *******
+//    ***** 
+//     ***    
+//      *
+
+// void pattern7(int N)
+// {
+//     for (int i = 0; i < N; i++)
+//     {
+//         for (int j =0; j<i; j++)
+//         {
+//             cout <<" ";
+//         }
+//         for(int j=0;j< 2*N -(2*i +1);j++){
+            
+//             cout<<"*";
+//         }
+//          for (int j =0; j<i; j++)
+//         {
+//             cout <<" ";
+//         }
+//         cout << endl;
+//     }
+// }
+// int main()
+// {   
+//     int N;
+//     cin>>N;
+//     pattern7(N);
+//     return 0;
+// }
