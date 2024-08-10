@@ -1,30 +1,30 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 //! pattern 2
 // Input Format: N = 3
-// Result: 
-// * 
-// * * 
+// Result:
+// *
+// * *
 // * * *
 
 // Input Format: N = 6
 // Result:
-// * 
-// * * 
+// *
+// * *
 // * * *
 // * * * *
 // * * * * *
 // * * * * * *
 // void pattern2(int n)
 // {
-//     for (int i = 1; i <= n; i++)  
+//     for (int i = 1; i <= n; i++)
 //     {
-//         for (int j = 1; j <= i; j++)  
+//         for (int j = 1; j <= i; j++)
 //         {
 //             cout << "*";
 //         }
-//         cout << endl;  
+//         cout << endl;
 //     }
 // }
 
@@ -37,9 +37,9 @@ using namespace std;
 
 //! pattern 3
 // Input Format: N = 3
-// Result: 
+// Result:
 // 1
-// 1 2 
+// 1 2
 // 1 2 3
 
 // Input Format: N = 6
@@ -69,11 +69,11 @@ using namespace std;
 //     return 0;
 // }
 
-//!pattern 4
+//! pattern 4
 // Input Format: N = 3
-// Result: 
+// Result:
 // * * *
-// * * 
+// * *
 // *
 // void pattern4(int n)
 // {
@@ -93,10 +93,10 @@ using namespace std;
 //     return 0;
 // }
 
- //! pattern 5
+//! pattern 5
 
 // Input Format: N = 3
-// Result: 
+// Result:
 // 1 2 3
 // 1 2
 // 1
@@ -122,16 +122,16 @@ using namespace std;
 //! pattern 6
 // Input Format: N = 6
 // Result:
-//      *     
-//     ***    
-//    *****   
-//   *******  
-//  ********* 
+//      *
+//     ***
+//    *****
+//   *******
+//  *********
 // ***********
 
 // void pattern6(int n)
 // {
-//     //outer for 
+//     //outer for
 //     for(int i=0; i<n; i++)
 //     {
 //         //space
@@ -162,12 +162,12 @@ using namespace std;
 
 //! pattern 7
 // Input Format: N = 6
-// Result:     
+// Result:
 // ***********
 //  *********
 //   *******
-//    ***** 
-//     ***    
+//    *****
+//     ***
 //      *
 
 // void pattern7(int N)
@@ -179,7 +179,7 @@ using namespace std;
 //             cout <<" ";
 //         }
 //         for(int j=0;j< 2*N -(2*i +1);j++){
-            
+
 //             cout<<"*";
 //         }
 //          for (int j =0; j<i; j++)
@@ -190,7 +190,7 @@ using namespace std;
 //     }
 // }
 // int main()
-// {   
+// {
 //     int N;
 //     cin>>N;
 //     pattern7(N);
@@ -199,23 +199,23 @@ using namespace std;
 
 //! pattern 8
 // Input Format: N = 6
-// Result:   
+// Result:
 //      *
 //     ***
-//    ***** 
+//    *****
 //   *******
 //  *********
-// ***********  
+// ***********
 // ***********
 //  *********
 //   *******
-//    ***** 
-//     ***    
+//    *****
+//     ***
 //      *
 // for this combine the pattern 6 and pattern 7
 
 // int main()
-// {   
+// {
 //     int N;
 //     cin>>N;
 //     pattern6(N);
@@ -225,16 +225,16 @@ using namespace std;
 
 // ! pattern 9
 // Input Format: N = 6
-// Result:   
+// Result:
 //      *
 //      **
-//      *** 
+//      ***
 //      ****
 //      *****
-//      ******  
+//      ******
 //      *****
 //      ****
-//      ***    
+//      ***
 //      **
 //      *
 
@@ -266,29 +266,29 @@ using namespace std;
 
 // void pattern10(int n)
 // {
-//     for (int i = 0; i <= n; i++) 
+//     for (int i = 0; i <= n; i++)
 //     {
-//         for (int j = 1; j <= n - i; j++) 
+//         for (int j = 1; j <= n - i; j++)
 //         {
-//             cout << " "; 
+//             cout << " ";
 //         }
-//         for (int j = 1; j <= 2 * i - 1; j++) 
+//         for (int j = 1; j <= 2 * i - 1; j++)
 //         {
-//             cout << "*"; 
+//             cout << "*";
 //         }
-//         cout << endl; 
+//         cout << endl;
 //     }
 //     for (int i = n - 1; i >= 1; i--)
 //     {
-//         for (int j = 1; j <= n - i; j++) 
+//         for (int j = 1; j <= n - i; j++)
 //         {
-//             cout << " "; 
+//             cout << " ";
 //         }
-//         for (int j = 1; j <= 2 * i - 1; j++) 
+//         for (int j = 1; j <= 2 * i - 1; j++)
 //         {
-//             cout << "*"; 
+//             cout << "*";
 //         }
-//         cout << endl; 
+//         cout << endl;
 //     }
 // }
 // int main()
@@ -299,9 +299,9 @@ using namespace std;
 //     return 0;
 // }
 
-//! pattern 11 
+//! pattern 11
 // Input Format: N = 6
-// Result:   
+// Result:
 // 1
 // 01
 // 101
@@ -316,7 +316,7 @@ using namespace std;
 //     {
 //         if(i%2 == 0)
 //         start = 1;
-//         else 
+//         else
 //         start = 0;
 //         for(int j=0; j<=i; j++)
 //         {
@@ -336,39 +336,125 @@ using namespace std;
 
 //! pattern 12
 // Input Format: N = 3
-// Result: 
+// Result:
 // 1    1
 // 12  21
 // 123321
 
-void pattern12(int n)
-{
-    int space = 2*(n-1);
-    for(int i=1; i<=n; i++)
-    {
-        // no.
-        for(int j=1; j<=i; j++)
-        {
-            cout<<j;
-        }
-        // space
-        for(int j=1; j<=space; j++)
-        {
-        cout<<" ";
-        }
-        // no.
-        for(int j=i; j>=1; j--)
-        {
-            cout<<j;
-        }
-        cout<<endl;
-        space -= 2;
-    }
-}
-int main()
-{
-    int n;
-    cin>>n;
-    pattern12(n);
-    return 0;   
-}
+// void pattern12(int n)
+// {
+//     int space = 2*(n-1);
+//     for(int i=1; i<=n; i++)
+//     {
+//         // no.
+//         for(int j=1; j<=i; j++)
+//         {
+//             cout<<j;
+//         }
+//         // space
+//         for(int j=1; j<=space; j++)
+//         {
+//         cout<<" ";
+//         }
+//         // no.
+//         for(int j=i; j>=1; j--)
+//         {
+//             cout<<j;
+//         }
+//         cout<<endl;
+//         space -= 2;
+//     }
+// }
+// int main()
+// {
+//     int n;
+//     cin>>n;
+//     pattern12(n);
+//     return 0;
+// }
+
+//! pattern 13
+// Input Format: N = 3
+// Result:
+// 1
+// 2 3
+// 4 5 6
+
+// void pattern13(int n)
+// {
+//     int inc = 1;
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = 1; j <= i; j++)
+//         {
+//             cout << inc;
+//             inc = inc + 1;
+//         }
+//         cout << endl;
+//     }
+// }
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     pattern13(n);
+//     return 0;
+// }
+
+//! pattern 14
+// Input Format: N = 6
+// Result:   
+// A
+// A B
+// A B C
+// A B C D
+// A B C D E
+// A B C D E F
+
+
+// void pattern14(int N)
+// {
+//       for(int i=0;i<N;i++){
+//           for(char ch = 'A'; ch<='A'+i;ch++){
+//               cout<<ch<<" "; 
+//           }
+//           cout<<endl;      
+//       }
+// }
+
+// int main()
+// {   
+//     int N;
+//     pattern14(N);
+//     cin>>N;
+//     return 0;
+// }
+
+//! pattern15
+// Input Format: N = 6
+// Result:   
+// A B C D E F
+// A B C D E 
+// A B C D
+// A B C
+// A B
+// A
+
+// void pattern15(int n)
+// {
+//     for(int i=0; i<n; i++)
+//     {   
+//         for(char ch='A'; ch<='A'+(n-i-1); ch++)
+//         {
+//             cout<<ch<<" ";
+//         }
+//         cout<<endl;
+//     }
+// }
+// int main()
+// {
+//     int n;
+//     cin>>n;
+//     pattern15(n);
+//     return 0;
+// }
