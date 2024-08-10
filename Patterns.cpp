@@ -264,37 +264,72 @@ using namespace std;
 
 // ! pattern 10
 
-void pattern10(int n)
+// void pattern10(int n)
+// {
+//     for (int i = 0; i <= n; i++) 
+//     {
+//         for (int j = 1; j <= n - i; j++) 
+//         {
+//             cout << " "; 
+//         }
+//         for (int j = 1; j <= 2 * i - 1; j++) 
+//         {
+//             cout << "*"; 
+//         }
+//         cout << endl; 
+//     }
+//     for (int i = n - 1; i >= 1; i--)
+//     {
+//         for (int j = 1; j <= n - i; j++) 
+//         {
+//             cout << " "; 
+//         }
+//         for (int j = 1; j <= 2 * i - 1; j++) 
+//         {
+//             cout << "*"; 
+//         }
+//         cout << endl; 
+//     }
+// }
+// int main()
+// {
+//     int n;
+//     cin>>n;
+//     pattern10(n);
+//     return 0;
+// }
+
+//! pattern 11 
+// Input Format: N = 6
+// Result:   
+// 1
+// 01
+// 101
+// 0101
+// 10101
+// 010101
+
+void pattern11(int n)
 {
-    for (int i = 0; i <= n; i++) 
+    int start = 1;
+    for(int i=0; i<n; i++)
     {
-        for (int j = 1; j <= n - i; j++) 
+        if(i%2 == 0)
+        start = 1;
+        else 
+        start = 0;
+        for(int j=0; j<=i; j++)
         {
-            cout << " "; 
+            cout<<start;
+            start=1-start;
         }
-        for (int j = 1; j <= 2 * i - 1; j++) 
-        {
-            cout << "*"; 
-        }
-        cout << endl; 
-    }
-    for (int i = n - 1; i >= 1; i--)
-    {
-        for (int j = 1; j <= n - i; j++) 
-        {
-            cout << " "; 
-        }
-        for (int j = 1; j <= 2 * i - 1; j++) 
-        {
-            cout << "*"; 
-        }
-        cout << endl; 
+        cout<<endl;
     }
 }
 int main()
 {
     int n;
     cin>>n;
-    pattern10(n);
+    pattern11(n);
     return 0;
 }
