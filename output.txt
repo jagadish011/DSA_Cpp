@@ -1,4 +1,6 @@
-   A   
-  ABC  
- ABCDC 
-ABCDEDC
+     A     
+    ABA    
+   ABCBA   
+  ABCDCBA  
+ ABCDEDCBA 
+ABCDEFEDCBA

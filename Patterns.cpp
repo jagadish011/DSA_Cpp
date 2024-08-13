@@ -501,35 +501,38 @@ using namespace std;
 //  ABCDEDCBA 
 // ABCDEFEDCBA
 
-// void pattern17(int n)
-// {
-//     for(int i=0; i<n; i++)
-//     {
-//         for(int j=0; j<n-i-1; j++)
-//         {
-//             cout<<" ";
-//         }
-//         char ch = 'A';
-//         int breakpoint = (2*i+1)/2;
-//         for(int j=0; j<2*i+1; j++)
-//         {
-//             cout<<ch;
-//             if(j<=breakpoint)
-//             ch++;
-//             else
-//             ch--;
-//         }
-//         for(int j=0; j<n-i-1; j++)
-//         {
-//             cout<<" ";
-//         }
-//         cout<<endl;
-//     }
-// }
-// int main()
-// {
-//     int n;
-//     cin>>n;
-//     pattern17(n);
-//     return 0;
-// }
+void pattern17(int N)
+{
+     for(int i=0;i<N;i++){
+          
+          // for printing the spaces.
+          for(int j=0;j<N-i-1;j++){
+              cout<<" ";
+          }
+          
+          // for printing the characters.
+          char ch = 'A';
+          int breakpoint = (2*i+1)/2;
+          for(int j=1;j<=2*i+1;j++){
+              
+              cout<<ch;
+              if(j <= breakpoint) 
+              ch++;
+              else ch--;
+          }
+          
+          // for printing the spaces again after characters.
+          for(int j=0;j<N-i-1;j++){
+              cout<<" ";
+          }
+          cout<<endl;
+          
+      }
+}
+int main()
+{
+    int N;
+    cin>>N;
+    pattern17(N);
+    return 0;
+}
