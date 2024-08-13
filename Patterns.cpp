@@ -501,38 +501,66 @@ using namespace std;
 //  ABCDEDCBA 
 // ABCDEFEDCBA
 
-void pattern17(int N)
-{
-     for(int i=0;i<N;i++){
+// void pattern17(int N)
+// {
+//      for(int i=0;i<N;i++){
           
-          // for printing the spaces.
-          for(int j=0;j<N-i-1;j++){
-              cout<<" ";
-          }
+//           // for printing the spaces.
+//           for(int j=0;j<N-i-1;j++){
+//               cout<<" ";
+//           }
           
-          // for printing the characters.
-          char ch = 'A';
-          int breakpoint = (2*i+1)/2;
-          for(int j=1;j<=2*i+1;j++){
-              
-              cout<<ch;
-              if(j <= breakpoint) 
-              ch++;
-              else ch--;
-          }
+//           // for printing the characters.
+//           char ch = 'A';
+//           int breakpoint = (2*i+1)/2;
+//           for(int j=1;j<=2*i+1;j++){
+//               cout<<ch;
+//               if(j <= breakpoint) 
+//               ch++;
+//               else ch--;
+//           }
           
-          // for printing the spaces again after characters.
-          for(int j=0;j<N-i-1;j++){
-              cout<<" ";
-          }
-          cout<<endl;
+//           // for printing the spaces again after characters.
+//           for(int j=0;j<N-i-1;j++){
+//               cout<<" ";
+//           }
+//           cout<<endl;
           
-      }
-}
-int main()
-{
-    int N;
-    cin>>N;
-    pattern17(N);
-    return 0;
-}
+//       }
+// }
+// int main()
+// {
+//     int N;
+//     cin>>N;
+//     pattern17(N);
+//     return 0;
+// }
+
+//! pattern 18
+// Input Format: N = 6
+// Result:   
+// F
+// E F
+// D E F
+// C D E F
+// B C D E F
+// A B C D E F
+
+// void pattern18(int n)
+// {
+//     for(int i=0; i<n; i++)
+//     {
+//         for(char ch='A'+(n-i-1); ch<='A'+(n-1); ch++)
+//         {
+//             cout<<ch<<" ";
+//         }
+//         cout<<endl;
+//     }
+// }
+// int main()
+// {
+//     int n;
+//     cin>>n;
+//     pattern18(n);
+//     return 0;
+// }
