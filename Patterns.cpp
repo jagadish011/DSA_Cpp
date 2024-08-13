@@ -564,3 +564,93 @@ using namespace std;
 //     pattern18(n);
 //     return 0;
 // }
+
+// ! pattern 19
+// Input Format: N = 3
+// Result: 
+// ******
+// **  **
+// *    *
+// *    *
+// **  **
+// ******
+
+// Input Format: N = 6
+// Result:   
+// ************
+// *****  *****
+// ****    ****
+// ***      ***
+// **        **
+// *          *
+// *          *
+// **        **
+// ***      ***
+// ****    ****
+// *****  *****
+// ************
+
+void pattern19(int n)
+{
+    int space = 0;
+    
+    // First half
+    for(int i = 0; i < n; i++)
+    {
+        // Left stars
+        for(int j = 0; j < n - i; j++)
+        {
+            cout << "*";
+        }
+        
+        // Middle spaces
+        for(int j = 0; j < space; j++)
+        {
+            cout << " ";
+        }
+        
+        // Right stars
+        for(int j = 0; j < n - i; j++)
+        {
+            cout << "*";
+        }
+        
+        space += 2;  // Increase spaces
+        cout << endl;
+    }
+    
+    space = 2 * n - 2;
+    
+    // Second half
+    for(int i = 0; i < n; i++)
+    {
+        // Left stars
+        for(int j = 0; j <= i; j++)
+        {
+            cout << "*";
+        }
+        
+        // Middle spaces
+        for(int j = 0; j < space; j++)
+        {
+            cout << " ";
+        }
+        
+        // Right stars
+        for(int j = 0; j <= i; j++)
+        {
+            cout << "*";
+        }
+        
+        space -= 2;  // Decrease spaces
+        cout << endl;
+    }
+}
+
+int main()
+{
+    int n;
+    cin>>n;
+    pattern19(n);
+    return 0;
+}
