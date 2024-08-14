@@ -718,16 +718,48 @@ using namespace std;
 // *    *
 // ******
 
-void pattern21(int n)
+// void pattern21(int n)
+// {
+//     for(int i=0; i<n; i++)
+//     {
+//         for(int j=0; j<n; j++)
+//         {
+//             if(i==0 || j==0 || i==n-1 || j==n-1)
+//             cout<<"*";
+//             else
+//             cout<<" ";
+//         }
+//         cout<<endl;
+//     }
+// }
+// int main()
+// {
+//     int n;
+//     cin>>n;
+//     pattern21(n);
+//     return 0;
+// }
+
+//! pattern 22
+// Input Format: N = 3
+// Result: 
+// 3 3 3 3 3 
+// 3 2 2 2 3 
+// 3 2 1 2 3 
+// 3 2 2 2 3 
+// 3 3 3 3 3
+
+void pattern22(int n)
 {
-    for(int i=0; i<n; i++)
+    for(int i=0; i<2*n-1; i++)
     {
-        for(int j=0; j<n; j++)
+        for(int j=0; j<2*n-1; j++)
         {
-            if(i==0 || j==0 || i==n-1 || j==n-1)
-            cout<<"*";
-            else
-            cout<<" ";
+            int top = i;
+            int left = j;
+            int right = 2*n-2-j;
+            int bottom = 2*n-2-i;
+        cout<<(n-min(min(top, bottom), min(left, right)));
         }
         cout<<endl;
     }
@@ -736,6 +768,6 @@ int main()
 {
     int n;
     cin>>n;
-    pattern21(n);
+    pattern22(n);
     return 0;
 }
