@@ -670,40 +670,72 @@ using namespace std;
 // **        **
 // *          *
 
-void pattern20(int n)
+// void pattern20(int n)
+// {
+//     int space = 2*n-2;
+//     for(int i=1; i<=2*n-1; i++)
+//     {
+//         int star = i;
+//         if(i>n)
+//         star = 2*n-i;
+//         // stars
+//         for(int j=1; j<=star; j++)
+//         {
+//             cout<<"*";
+//         }
+//         // space
+//         for(int j=1; j<=space; j++)
+//         {
+//             cout<<" ";
+//         }
+//         // star
+//         for(int j=1; j<=star; j++)
+//         {
+//             cout<<"*";
+//         }
+//         cout<<endl;
+//         if(i<n)
+//         space-=2;
+//         else
+//         space+=2;
+//     }
+// }
+// int main()
+// {
+//     int n;
+//     cin>>n;
+//     pattern20(n);
+//     return 0;
+// }
+
+//! pattern 21
+// Input Format: N = 6
+// Result:   
+// ******
+// *    *
+// *    *
+// *    *
+// *    *
+// ******
+
+void pattern21(int n)
 {
-    int space = 2*n-2;
-    for(int i=1; i<=2*n-1; i++)
+    for(int i=0; i<n; i++)
     {
-        int star = i;
-        if(i>n)
-        star = 2*n-i;
-        // stars
-        for(int j=1; j<=star; j++)
+        for(int j=0; j<n; j++)
         {
+            if(i==0 || j==0 || i==n-1 || j==n-1)
             cout<<"*";
-        }
-        // space
-        for(int j=1; j<=space; j++)
-        {
+            else
             cout<<" ";
         }
-        // star
-        for(int j=1; j<=star; j++)
-        {
-            cout<<"*";
-        }
         cout<<endl;
-        if(i<n)
-        space-=2;
-        else
-        space+=2;
     }
 }
 int main()
 {
     int n;
     cin>>n;
-    pattern20(n);
+    pattern21(n);
     return 0;
 }
