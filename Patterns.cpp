@@ -590,67 +590,120 @@ using namespace std;
 // *****  *****
 // ************
 
-void pattern19(int n)
+// void pattern19(int n)
+// {
+//     int space = 0;
+    
+//     // First half
+//     for(int i = 0; i < n; i++)
+//     {
+//         // Left stars
+//         for(int j = 0; j < n - i; j++)
+//         {
+//             cout << "*";
+//         }
+        
+//         // Middle spaces
+//         for(int j = 0; j < space; j++)
+//         {
+//             cout << " ";
+//         }
+        
+//         // Right stars
+//         for(int j = 0; j < n - i; j++)
+//         {
+//             cout << "*";
+//         }
+        
+//         space += 2;  // Increase spaces
+//         cout << endl;
+//     }
+    
+//     space = 2 * n - 2;
+    
+//     // Second half
+//     for(int i = 0; i < n; i++)
+//     {
+//         // Left stars
+//         for(int j = 0; j <= i; j++)
+//         {
+//             cout << "*";
+//         }
+        
+//         // Middle spaces
+//         for(int j = 0; j < space; j++)
+//         {
+//             cout << " ";
+//         }
+        
+//         // Right stars
+//         for(int j = 0; j <= i; j++)
+//         {
+//             cout << "*";
+//         }
+        
+//         space -= 2;  // Decrease spaces
+//         cout << endl;
+//     }
+// }
+
+// int main()
+// {
+//     int n;
+//     cin>>n;
+//     pattern19(n);
+//     return 0;
+// }
+
+// ! pattern 20 
+// Input Format: N = 6
+// Result:   
+// *          *
+// **        **
+// ***      ***
+// ****    ****
+// *****  *****
+// ************
+// *****  *****
+// ****    ****
+// ***      ***
+// **        **
+// *          *
+
+void pattern20(int n)
 {
-    int space = 0;
-    
-    // First half
-    for(int i = 0; i < n; i++)
+    int space = 2*n-2;
+    for(int i=1; i<=2*n-1; i++)
     {
-        // Left stars
-        for(int j = 0; j < n - i; j++)
+        int star = i;
+        if(i>n)
+        star = 2*n-i;
+        // stars
+        for(int j=1; j<=star; j++)
         {
-            cout << "*";
+            cout<<"*";
         }
-        
-        // Middle spaces
-        for(int j = 0; j < space; j++)
+        // space
+        for(int j=1; j<=space; j++)
         {
-            cout << " ";
+            cout<<" ";
         }
-        
-        // Right stars
-        for(int j = 0; j < n - i; j++)
+        // star
+        for(int j=1; j<=star; j++)
         {
-            cout << "*";
+            cout<<"*";
         }
-        
-        space += 2;  // Increase spaces
-        cout << endl;
-    }
-    
-    space = 2 * n - 2;
-    
-    // Second half
-    for(int i = 0; i < n; i++)
-    {
-        // Left stars
-        for(int j = 0; j <= i; j++)
-        {
-            cout << "*";
-        }
-        
-        // Middle spaces
-        for(int j = 0; j < space; j++)
-        {
-            cout << " ";
-        }
-        
-        // Right stars
-        for(int j = 0; j <= i; j++)
-        {
-            cout << "*";
-        }
-        
-        space -= 2;  // Decrease spaces
-        cout << endl;
+        cout<<endl;
+        if(i<n)
+        space-=2;
+        else
+        space+=2;
     }
 }
-
 int main()
 {
     int n;
     cin>>n;
-    pattern19(n);
+    pattern20(n);
     return 0;
 }
