@@ -38,18 +38,34 @@ using namespace std;
 // }
 
 // ! Print N to 1 using Recursion
+// void func(int i, int n)
+// {
+//     // Base condition
+//     if(i<1)
+//     return;
+//     cout<<i<<endl;
+//     func(i-1,n);
+// }
+// int main()
+// {
+//     int n;
+//     cin>>n;
+//     func(n,n);
+//     return 0;
+// }
+
+// ! Print 1 to N using Recursion (not using i+1)
 void func(int i, int n)
 {
-    // Base condition
     if(i<1)
     return;
-    cout<<i<<endl;
     func(i-1,n);
+    cout<<i<<endl;
 }
 int main()
 {
     int n;
     cin>>n;
     func(n,n);
-    return 0;
+    // return 0;
 }
